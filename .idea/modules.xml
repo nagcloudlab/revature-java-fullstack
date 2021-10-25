@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/1-OO-class-object/1-OO-class-object.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/1-OO-class-object/1-OO-class-object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/3-Collections/1-collections-intro/1-collections-intro.iml" filepath="$PROJECT_DIR$/code/java/3-Collections/1-collections-intro/1-collections-intro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/10-Inheritance-II/10-Inheritance-II.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/10-Inheritance-II/10-Inheritance-II.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/11-OO-listener pattern/11-OO-listener pattern.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/11-OO-listener pattern/11-OO-listener pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/3-Collections/2-EM/2-EM.iml" filepath="$PROJECT_DIR$/code/java/3-Collections/2-EM/2-EM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/2-Mini-bytes/2-Java strings/2-Java strings.iml" filepath="$PROJECT_DIR$/code/java/2-Mini-bytes/2-Java strings/2-Java strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/2-access-specifiers/2-access-specifiers.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/2-access-specifiers/2-access-specifiers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/2-Mini-bytes/3--Java exception/3--Java exception.iml" filepath="$PROJECT_DIR$/code/java/2-Mini-bytes/3--Java exception/3--Java exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/3-Collections/3-comparable_comparator_Ex/3-comparable_comparator_Ex.iml" filepath="$PROJECT_DIR$/code/java/3-Collections/3-comparable_comparator_Ex/3-comparable_comparator_Ex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/3-constructors/3-constructors.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/3-constructors/3-constructors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/2-Mini-bytes/4-Mini-bytes-1/4-Mini-bytes-1.iml" filepath="$PROJECT_DIR$/code/java/2-Mini-bytes/4-Mini-bytes-1/4-Mini-bytes-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/3-Collections/4-Set-colln/4-Set-colln.iml" filepath="$PROJECT_DIR$/code/java/3-Collections/4-Set-colln/4-Set-colln.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/4-accessor-methods/4-accessor-methods.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/4-accessor-methods/4-accessor-methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/2-Mini-bytes/5-Mini-bytes-2/5-Mini-bytes-2.iml" filepath="$PROJECT_DIR$/code/java/2-Mini-bytes/5-Mini-bytes-2/5-Mini-bytes-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/3-Collections/5-Set-Map-Colln/5-Set-Map-Colln.iml" filepath="$PROJECT_DIR$/code/java/3-Collections/5-Set-Map-Colln/5-Set-Map-Colln.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/5-abstraction-encapsulation/5-abstraction-encapsulation.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/5-abstraction-encapsulation/5-abstraction-encapsulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/2-Mini-bytes/6-Java Annotations/6-Java Annotations.iml" filepath="$PROJECT_DIR$/code/java/2-Mini-bytes/6-Java Annotations/6-Java Annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/3-Collections/6-collection-final/6-collection-final.iml" filepath="$PROJECT_DIR$/code/java/3-Collections/6-collection-final/6-collection-final.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/6-type-casting/6-type-casting.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/6-type-casting/6-type-casting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/2-Mini-bytes/7-Framework-Component model in java/7-Framework-Component model in java.iml" filepath="$PROJECT_DIR$/code/java/2-Mini-bytes/7-Framework-Component model in java/7-Framework-Component model in java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/7-SOLID principles/7-SOLID principles.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/7-SOLID principles/7-SOLID principles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/8-Inheritance-I/8-Inheritance-I.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/8-Inheritance-I/8-Inheritance-I.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/2-Mini-bytes/8-generic types/8-generic types.iml" filepath="$PROJECT_DIR$/code/java/2-Mini-bytes/8-generic types/8-generic types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/9-Interface vs AbstractClasses/9-Interface vs AbstractClasses.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/9-Interface vs AbstractClasses/9-Interface vs AbstractClasses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/mts/mts.iml" filepath="$PROJECT_DIR$/code/mts/mts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/revature-java-fullstack.iml" filepath="$PROJECT_DIR$/.idea/revature-java-fullstack.iml" />
+    </modules>
+  </component>
+</project>
