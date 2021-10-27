@@ -84,11 +84,11 @@ public class Ex3 {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
         // #Req-1 : collect all even numbers
-        List<Integer> evenNumbers = filter(numbers, integer -> integer % 2 == 0);
+        List<Integer> evenNumbers = filter(numbers, n -> n % 2 == 0);
         System.out.println(evenNumbers);
 
         // #Req-2 : collect all odd numbers
-        List<Integer> oddNumbers = filter(numbers, integer -> integer%2!=0);
+        List<Integer> oddNumbers = filter(numbers, n -> n%2!=0);
         System.out.println(oddNumbers);
 
         // #Req-3 : collect all even numbers above five
@@ -111,7 +111,7 @@ public class Ex3 {
         intention - implementation seperated
      */
     //---------------------------------------------------------------
-    // Why should i Functional Programming
+    // Why should i use Functional Programming
 
     /*
         => to write compact & concise code
