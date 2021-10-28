@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class Why_We_Nedd_FP {
+public class Why_We_Need_FP {
     public static void main(String[] args) {
 
         List<String> menu=new ArrayList<>();
