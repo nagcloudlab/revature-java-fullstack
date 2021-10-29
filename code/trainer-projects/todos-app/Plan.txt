@@ -1,0 +1,86 @@
+
+-------------------------------------------------------------------------
+project : console based todo application
+-------------------------------------------------------------------------
+
+step-1 : find data model
+
+            1. Todo
+                   - id : int
+                   - title : string
+                   - completed : boolean
+                   - createdAt : date&time
+                   - scheduledAt : date&time
+
+            2. User
+                    - name : string
+                    - email : string
+
+step-2 : find relationship b/w data models
+
+            - ONE user has MANY Todos
+            - MANY todos belongs to ONE user
+
+
+
+step-3: find use-cases on data models
+
+
+            - addTodo
+            - editTodo
+            - deleteTodo
+            - completeTodo
+            - completeAll
+            - clearCompleted
+            - viewTodos
+
+            - register
+            - login
+            - logout
+
+
+------------------------------------------------------------------------
+software
+------------------------------------------------------------------------
+
+
+    1- datasource a.k.a database
+
+        => persist data
+
+    2- application
+
+        => process data
+
+        types of applications
+
+            - console based application
+            - web-based application
+            - mobile application
+            - etc..
+
+
+---------------------------------------------------------------------------
+
+S/w Application
+
+
+   Layers i.e logical separation of code
+   A layer can have many components / objects
+
+
+    1. data / dao / repository layer
+
+        => data accessing code
+
+    2. service / business layer
+
+        => data processing code
+
+    3. web layer
+
+        => request / response code
+
+---------------------------------------------------------------------------
+
+
