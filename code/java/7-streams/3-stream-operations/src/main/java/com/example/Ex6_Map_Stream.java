@@ -41,9 +41,9 @@ public class Ex6_Map_Stream {
         //--------------------------------------------------------------
 
         String[] menuLines = {
-                "idly,vada,poori",
-                "idly,vada,pongal",
-                "c-biryani,f-biryani",
+                "idly vada poori",
+                "idly vada pongal",
+                "c-biryani f-biryani",
                 "f-biryani"
         };
 
@@ -51,7 +51,7 @@ public class Ex6_Map_Stream {
 
         Arrays
                 .stream(menuLines)
-                .flatMap(line-> Arrays.stream(line.split(",")))
+                .flatMap(line-> Arrays.stream(line.split(" ")))
                 .forEach(System.out::println);
 
 
@@ -61,7 +61,6 @@ public class Ex6_Map_Stream {
         list.add(List.of(1,2,3,4,5,6));
         list.add(List.of(2,3,6,7,7,9));
         list.add(List.of(2,3,5,67,8,9));
-
 
         list
                 .stream()
