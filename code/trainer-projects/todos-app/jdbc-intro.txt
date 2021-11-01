@@ -1,0 +1,23 @@
+
+
+----------------------------------------------------------
+
+
+How to use JDBC API with our java-code?
+
+steps:
+
+step-1 : Install / Register JDBC driver
+        ( so that api can communicate with specific DBMS product)
+
+step-2 : create DB-connection with URL, username & password
+
+step-3:  create JDBC statements with SQL
+
+step-4:  execute JDBC-statements & process results
+
+step-5 : Handle SQL-exceptions
+
+step-6 : Manage Transactions ( commit & rollback)
+
+step-7 : close / release connection

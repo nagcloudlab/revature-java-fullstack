@@ -1,6 +1,6 @@
 package com.example;
 
-import com.mysql.cj.jdbc.Driver;
+//import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*; // JDBC API
 
@@ -11,7 +11,7 @@ public class Jdbc_Ex {
         Connection connection = null;
         try {
             // step-1 : Install / Register JDBC driver
-            DriverManager.registerDriver(new Driver());
+//            DriverManager.registerDriver(new Driver());
 
             // step-2 : create DB-connection with URL, username & password
             String url = "jdbc:mysql://localhost:3306/todosdb";
@@ -23,7 +23,7 @@ public class Jdbc_Ex {
             // step-3 :  create JDBC statements with SQL
             String sql = "insert into todos(title,completed,user_id) values (?,?,?)";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, "todo5");
+            ps.setString(1, "todo8");
             ps.setBoolean(2, false);
             ps.setInt(3, 1);
             // step-4 :  execute JDBC-statements & process results
