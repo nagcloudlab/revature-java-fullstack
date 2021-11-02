@@ -17,10 +17,10 @@ CREATE TABLE todos(
 insert into users(name,email) values ('Nag','nag@mail.com');
 insert into users(name,email) values ('Indu','indu@mail.com');
 
-insert into todos(title,completed,user_id) values ('todo1',false,1);
-insert into todos(title,completed,user_id) values ('todo2',false,1);
-insert into todos(title,completed,user_id) values ('todo3',true,1);
-insert into todos(title,completed,user_id) values ('todo4',false,2);
+-- insert into todos(title,completed,user_id) values ('todo1',false,1);
+-- insert into todos(title,completed,user_id) values ('todo2',false,1);
+-- insert into todos(title,completed,user_id) values ('todo3',true,1);
+-- insert into todos(title,completed,user_id) values ('todo4',false,2);
 
 ----------------------------------------------------------------
 -- select all todos for user 'Nag'
