@@ -4,7 +4,7 @@ package com.example;
 
 import java.sql.*; // JDBC API
 
-public class Jdbc_Ex {
+public class Jdbc_Intro {
 
     public static void main(String[] args) {
 
@@ -23,9 +23,11 @@ public class Jdbc_Ex {
             // step-3 :  create JDBC statements with SQL
             String sql = "insert into todos(title,completed,user_id) values (?,?,?)";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, "todo8");
+            ps.setString(1, "todo9");
             ps.setBoolean(2, false);
             ps.setInt(3, 1);
+
+
             // step-4 :  execute JDBC-statements & process results
             int rowCount = ps.executeUpdate();
             if (rowCount == 1)
@@ -34,7 +36,7 @@ public class Jdbc_Ex {
 
          // step-5 : Handle SQL-exceptions
         } catch (SQLException e) {
-            e.printStackTrace();
+            e.printStackTrace(); // print exception details in console
         } finally {
             // step-7 : close / release connection
             if (connection != null) {

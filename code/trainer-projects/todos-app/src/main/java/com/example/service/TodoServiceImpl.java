@@ -6,6 +6,14 @@ import com.example.repository.TodoRepository;
 
 import java.util.List;
 
+
+/*
+    service:
+
+    to process data based business rules
+
+ */
+
 public class TodoServiceImpl implements TodoService {
 
     private TodoRepository todoRepository;
@@ -16,7 +24,7 @@ public class TodoServiceImpl implements TodoService {
 
     @Override
     public void addTodo(String title) {
-        Todo newTodo = new Todo(title);
+        Todo newTodo = new Todo(title); // entity i.e obj's data we will in database
         todoRepository.save(newTodo);
     }
 

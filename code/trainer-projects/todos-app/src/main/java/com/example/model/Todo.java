@@ -1,5 +1,7 @@
 package com.example.model;
 
+
+// Object Model
 public class Todo {
 
     private int id; // 0
