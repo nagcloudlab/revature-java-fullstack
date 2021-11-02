@@ -25,7 +25,6 @@ import java.util.List;
 
 public class JdbcTodoRepository implements TodoRepository {
 
-
     @Override
     public void save(Todo todo) {
         Connection connection = null;
@@ -63,16 +62,100 @@ public class JdbcTodoRepository implements TodoRepository {
     @Override
     public void update(int id, String title) {
 
+        Connection connection = null;
+        try {
+            connection = MySQLConnectionFactory.getConnection();
+            String sql = "update todos set title=? where id=?";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, title);
+            ps.setInt(2, id);
+
+            int rowCount = ps.executeUpdate();
+            if (rowCount == 1) {
+                System.out.println("Todo updated..");
+            }
+
+            // step-5 : Handle SQL-exceptions
+        } catch (SQLException e) {
+            e.printStackTrace(); // print exception details in console
+        } finally {
+            // step-7 : close / release connection
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
     }
 
     @Override
     public void update(int id, boolean completed) {
+        {
 
+            Connection connection = null;
+            try {
+                connection = MySQLConnectionFactory.getConnection();
+                String sql = "update todos set completed=? where id=?";
+                PreparedStatement ps = connection.prepareStatement(sql);
+                ps.setBoolean(1, completed);
+                ps.setInt(2, id);
+
+                int rowCount = ps.executeUpdate();
+                if (rowCount == 1) {
+                    System.out.println("Todo updated..");
+                }
+
+                // step-5 : Handle SQL-exceptions
+            } catch (SQLException e) {
+                e.printStackTrace(); // print exception details in console
+            } finally {
+                // step-7 : close / release connection
+                if (connection != null) {
+                    try {
+                        connection.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+        }
     }
 
     @Override
     public void delete(int id) {
+        {
 
+            Connection connection = null;
+            try {
+                connection = MySQLConnectionFactory.getConnection();
+                String sql = "delete from todos where id=?";
+                PreparedStatement ps = connection.prepareStatement(sql);
+                ps.setInt(1, id);
+
+                int rowCount = ps.executeUpdate();
+                if (rowCount == 1) {
+                    System.out.println("Todo deleted..");
+                }
+
+                // step-5 : Handle SQL-exceptions
+            } catch (SQLException e) {
+                e.printStackTrace(); // print exception details in console
+            } finally {
+                // step-7 : close / release connection
+                if (connection != null) {
+                    try {
+                        connection.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+        }
     }
 
     @Override
@@ -117,3 +200,4 @@ public class JdbcTodoRepository implements TodoRepository {
 
     }
 }
+

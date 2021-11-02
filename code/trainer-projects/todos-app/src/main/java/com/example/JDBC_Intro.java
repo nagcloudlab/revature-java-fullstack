@@ -4,7 +4,7 @@ package com.example;
 
 import java.sql.*; // JDBC API
 
-public class Jdbc_Intro {
+public class JDBC_Intro {
 
     public static void main(String[] args) {
 

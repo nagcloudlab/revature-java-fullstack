@@ -2,15 +2,16 @@ package com.example;
 
 import com.example.model.Todo;
 import com.example.model.TodoFilter;
-import com.example.repository.InMemoryTodoRepository;
-import com.example.repository.JdbcTodoRepository;
-import com.example.repository.TodoRepository;
+import com.example.model.User;
+import com.example.repository.*;
 import com.example.service.TodoService;
 import com.example.service.TodoServiceImpl;
+import com.example.service.UserService;
+import com.example.service.UserServiceImpl;
 
 import java.util.Scanner;
 
-public class Application {
+public class TodoApplication {
 
     static Scanner scanner = new Scanner(System.in);
 
@@ -22,6 +23,9 @@ public class Application {
     static TodoRepository todoRepository = new JdbcTodoRepository(); // dependency
     static TodoService todoService = new TodoServiceImpl(todoRepository); // dependent
 
+    static UserRepository userRepository = new JdbcUserRepository();
+    static UserService userService = new UserServiceImpl(userRepository);
+
     //-------------------------------------------------------------------
 
     public static void main(String[] args) {
@@ -30,12 +34,17 @@ public class Application {
         // Use
         //------------------------------------------------------------------
 
-
         while (true) {
             System.out.println("select choice !");
             System.out.println("" +
+
                     "1- Add Todo \n" +
-                    "2- View Todos" +
+                    "2- View Todos \n" +
+                    "3- Update Todo \n" +
+                    "4- Delete Todo \n" +
+
+                    "5- Register User \n" +
+
                     "");
 
             int choice = scanner.nextInt();
@@ -47,6 +56,18 @@ public class Application {
                 }
                 case 2: {
                     handleChoice2();
+                    break;
+                }
+                case 3: {
+                    handleChoice3();
+                    break;
+                }
+                case 4: {
+                    handleChoice4();
+                    break;
+                }
+                case 5: {
+                    handleChoice5();
                     break;
                 }
             }
@@ -69,5 +90,42 @@ public class Application {
                 .forEach(System.out::println);
     }
 
+    private static void handleChoice3() {
+        System.out.println("Enter todo new-title");
+        scanner.nextLine();
+        String title = scanner.nextLine();
+
+        System.out.println("Enter todo id");
+        int id = scanner.nextInt();
+        todoService.editTodo(id, title);
+    }
+
+    private static void handleChoice4() {
+        System.out.println("Enter todo id");
+        int id = scanner.nextInt();
+        todoService.deleteTodo(id);
+    }
+
+    private static void handleChoice5() {
+
+        scanner.nextLine();
+
+        System.out.println("Email !");
+        String email = scanner.nextLine();
+
+        System.out.println("Password !");
+        String password = scanner.nextLine();
+
+        System.out.println("Name !");
+        String name = scanner.nextLine();
+
+        User user = new User();
+        user.setEmail(email);
+        user.setPassword(password);
+        user.setName(name);
+
+        userService.register(user);
+
+    }
 
 }
