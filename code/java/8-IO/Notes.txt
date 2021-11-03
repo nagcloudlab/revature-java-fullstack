@@ -1,0 +1,69 @@
+
+common IO sources for programs
+---------------------------------------
+
+    1. standard input-source ( keyboard ) / output-source ( console/terminal/command-prompt )
+    2. file
+    3. n/w sockets
+
+
+How to do IO in java ?
+-----------------------------------------
+
+ => should IO-stream between java-program and IO-source
+
+
+
+    java-program               IO-source
+
+               <--------------->
+                   io-stream
+
+
+    2 types of IO streams
+
+     1. byte-stream / 8-bit stream
+     2. character-stream / 16-bit stream
+
+
+---------------------------------------------------------------
+
+java.io.*
+
+    8-bit
+    ---------
+        InputStream
+        OutputStream
+
+    16-bit
+    ------
+        Reader
+        Writer
+
+--------------------------------------------------------------
+
+source : standard input/output source
+
+--------------------------------------------------------------
+
+source: file
+
+            text-file
+
+                read : FileReader
+                write: FileWriter
+
+            binary-file
+
+                read  : FileInputStream
+                write : FileOutputStream
+
+
+--------------------------------------------------------------
+
+    InputStreamReader
+
+        => to transform 8-bits to 16-bit
+
+---------------------------------------------------------------
+

@@ -1,0 +1,15 @@
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/model/User.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/db/MySQLConnectionFactory.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/repository/UserRepository.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/TodoApplication.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/repository/JdbcTodoRepository.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/repository/InMemoryTodoRepository.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/service/TodoService.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/repository/TodoRepository.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/service/UserService.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/model/Todo.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/service/UserServiceImpl.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/JDBC_Intro.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/service/TodoServiceImpl.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/repository/JdbcUserRepository.java
+/home/nag/Work/revature-java-fullstack/code/trainer-projects/todos-app/src/main/java/com/example/model/TodoFilter.java
