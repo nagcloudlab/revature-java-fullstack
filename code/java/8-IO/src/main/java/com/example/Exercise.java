@@ -1,24 +1,54 @@
 package com.example;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.DoubleSummaryStatistics;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
 public class Exercise {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException, IOException {
 
-        /*
+        //---------------------------------------------------------------
+        // way-1 : Imperative style
+        //---------------------------------------------------------------
 
-        read report file, give me below summary
+//        Scanner scanner = new Scanner(new File("report.txt"));
+//        Map<String, Double> map = new HashMap<>();
+//        while (scanner.hasNextLine()) {
+//            String line = scanner.nextLine();
+//            String[] tokens = line.split(",");
+//            String department = tokens[1];
+//            double salary = Double.parseDouble(tokens[2]);
+//            if (map.containsKey(department)) {
+//                double newTotal = map.get(department) + salary;
+//                map.put(department, newTotal);
+//            } else {
+//                map.put(department, salary);
+//            }
+//        }
+//        System.out.println(map);
+//        scanner.close();
 
-            output:
-            dep - total-salary
 
-            IT - 3000
-            HR - 3000
-            SALES - 4000
+        //---------------------------------------------------------------
+        // way-2 : Declarative style
+        //---------------------------------------------------------------
 
-            condition: we don't know how many departments exist in that file
+        Map<String, DoubleSummaryStatistics> map =
+                Files.lines(Paths.get("report.txt"))
+                        .map(line -> line.split(","))
+                        .collect(Collectors.groupingBy(tokens -> tokens[1],
+                                Collectors.summarizingDouble(tokens -> Double.parseDouble(tokens[2]))));
 
-         */
-
+        System.out.println(map);
     }
 
 }
