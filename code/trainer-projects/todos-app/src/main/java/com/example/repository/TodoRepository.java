@@ -16,6 +16,6 @@ public interface TodoRepository {
 
     void delete(int id);
 
-    List<Todo> findAll(TodoFilter todoFilter);
+    List<Todo> findAll(TodoFilter todoFilter,int userId);
 
 }

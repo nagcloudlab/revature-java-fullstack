@@ -35,7 +35,7 @@ public class JdbcTodoRepository implements TodoRepository {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, todo.getTitle());
             ps.setBoolean(2, todo.isCompleted());
-            ps.setInt(3, 1); // user_id hard-coded
+            ps.setInt(3, todo.getUser().getId()); // user_id hard-coded
 
             // step-4 :  execute JDBC-statements & process results
             int rowCount = ps.executeUpdate();
@@ -159,7 +159,7 @@ public class JdbcTodoRepository implements TodoRepository {
     }
 
     @Override
-    public List<Todo> findAll(TodoFilter todoFilter) {
+    public List<Todo> findAll(TodoFilter todoFilter, int userId) {
 
         List<Todo> todos = new ArrayList<>();
 
@@ -167,9 +167,9 @@ public class JdbcTodoRepository implements TodoRepository {
         try {
             connection = MySQLConnectionFactory.getConnection();
             // step-3 :  create JDBC statements with SQL
-            String sql = "select * from todos";
+            String sql = "select * from todos where user_id=?";
             PreparedStatement ps = connection.prepareStatement(sql);
-
+            ps.setInt(1, userId);
             // step-4 :  execute JDBC-statements & process results
             ResultSet rs = ps.executeQuery();
 

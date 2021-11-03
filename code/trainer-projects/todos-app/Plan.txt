@@ -77,9 +77,6 @@ S/w Application
 
         => data processing code
 
-    3. web layer
-
-        => request / response code
 
 ---------------------------------------------------------------------------
 

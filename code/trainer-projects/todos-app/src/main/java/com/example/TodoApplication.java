@@ -1,5 +1,7 @@
 package com.example;
 
+import com.example.exceptions.InvalidCredentialException;
+import com.example.exceptions.UserNotFoundException;
 import com.example.model.Todo;
 import com.example.model.TodoFilter;
 import com.example.model.User;
@@ -15,10 +17,11 @@ public class TodoApplication {
 
     static Scanner scanner = new Scanner(System.in);
 
-
     //------------------------------------------------------------------
     // Init
     //------------------------------------------------------------------
+
+    static User currentUser = null;
 
     static TodoRepository todoRepository = new JdbcTodoRepository(); // dependency
     static TodoService todoService = new TodoServiceImpl(todoRepository); // dependent
@@ -35,15 +38,16 @@ public class TodoApplication {
         //------------------------------------------------------------------
 
         while (true) {
-            System.out.println("select choice !");
+            System.out.println("\n select choice !");
             System.out.println("" +
-
+                    "\n\n" +
                     "1- Add Todo \n" +
                     "2- View Todos \n" +
                     "3- Update Todo \n" +
                     "4- Delete Todo \n" +
-
-                    "5- Register User \n" +
+                    "5- Register \n" +
+                    "6- Login \n" +
+                    "7- Logout \n" +
 
                     "");
 
@@ -70,6 +74,15 @@ public class TodoApplication {
                     handleChoice5();
                     break;
                 }
+                case 6: {
+                    handleChoice6();
+                    break;
+                }
+                case 7: {
+                    currentUser = null;
+                    todoService.setUser(null);
+                    break;
+                }
             }
         }
 
@@ -77,6 +90,7 @@ public class TodoApplication {
 
 
     }
+
 
     private static void handleChoice1() {
         System.out.println("Enter todo title");
@@ -125,6 +139,22 @@ public class TodoApplication {
         user.setName(name);
 
         userService.register(user);
+
+    }
+
+    private static void handleChoice6() {
+        scanner.nextLine();
+        System.out.println("Enter Email");
+        String email = scanner.nextLine();
+        System.out.println("Enter Password");
+        String password = scanner.nextLine();
+        try {
+            currentUser = userService.login(email, password);
+            todoService.setUser(currentUser);
+            System.out.println("login successful");
+        } catch (UserNotFoundException | InvalidCredentialException e) {
+            System.out.println("exception: " + e.getMessage());
+        }
 
     }
 

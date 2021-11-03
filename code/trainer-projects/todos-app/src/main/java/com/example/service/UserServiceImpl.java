@@ -1,6 +1,8 @@
 package com.example.service;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
+import com.example.exceptions.InvalidCredentialException;
+import com.example.exceptions.UserNotFoundException;
 import com.example.model.User;
 import com.example.repository.UserRepository;
 
@@ -23,7 +25,19 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void login(String email, String password) {
+    public User login(String email, String password) {
+        User user = userRepository.findByEmail(email);
+        if (user != null) {
+            BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), user.getPassword());
+            if (result.verified) {
+                return user;
+            } else {
+                throw new InvalidCredentialException("incorrect user/password");
+            }
+        } else {
+            throw new UserNotFoundException("No user found");
+        }
 
     }
+
 }

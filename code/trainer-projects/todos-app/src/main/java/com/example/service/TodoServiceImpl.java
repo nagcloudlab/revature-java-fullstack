@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.example.model.Todo;
 import com.example.model.TodoFilter;
+import com.example.model.User;
 import com.example.repository.TodoRepository;
 
 import java.util.List;
@@ -17,14 +18,21 @@ import java.util.List;
 public class TodoServiceImpl implements TodoService {
 
     private TodoRepository todoRepository;
+    private User user;
 
     public TodoServiceImpl(TodoRepository todoRepository) {
         this.todoRepository = todoRepository;
     }
 
     @Override
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @Override
     public void addTodo(String title) {
         Todo newTodo = new Todo(title); // entity i.e obj's data we will in database
+        newTodo.setUser(user);
         todoRepository.save(newTodo);
     }
 
@@ -55,6 +63,6 @@ public class TodoServiceImpl implements TodoService {
 
     @Override
     public List<Todo> getTodos(TodoFilter todoFilter) {
-        return todoRepository.findAll(todoFilter);
+        return todoRepository.findAll(todoFilter,user.getId());
     }
 }

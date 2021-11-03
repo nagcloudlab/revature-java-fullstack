@@ -49,6 +49,14 @@ public class Todo {
         this.completed = completed;
     }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
     @Override
     public String toString() {
         return "Todo{" +

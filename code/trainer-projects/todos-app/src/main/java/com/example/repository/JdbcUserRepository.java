@@ -62,12 +62,11 @@ public class JdbcUserRepository implements UserRepository {
 
             while (rs.next()) {
                 user = new User();
+                user.setId(rs.getInt("id"));
                 user.setName(rs.getString("name"));
                 user.setEmail(rs.getString("email"));
                 user.setPassword(rs.getString("password"));
             }
-
-
             // step-5 : Handle SQL-exceptions
         } catch (SQLException e) {
             e.printStackTrace(); // print exception details in console
@@ -81,9 +80,7 @@ public class JdbcUserRepository implements UserRepository {
                 }
             }
         }
-
         return user;
-
     }
 
 }
