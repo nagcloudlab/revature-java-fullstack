@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/1-OO-class-object/1-OO-class-object.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/1-OO-class-object/1-OO-class-object.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/java/3-Collections/1-collections-intro/1-collections-intro.iml" filepath="$PROJECT_DIR$/code/java/3-Collections/1-collections-intro/1-collections-intro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/6-Lambda Expressions/1-wht-we-need-FP/1-wht-we-need-FP.iml" filepath="$PROJECT_DIR$/code/java/6-Lambda Expressions/1-wht-we-need-FP/1-wht-we-need-FP.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/10-Inheritance-II/10-Inheritance-II.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/10-Inheritance-II/10-Inheritance-II.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/11-OO-listener pattern/11-OO-listener pattern.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/11-OO-listener pattern/11-OO-listener pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/java/3-Collections/2-EM/2-EM.iml" filepath="$PROJECT_DIR$/code/java/3-Collections/2-EM/2-EM.iml" />
@@ -23,6 +24,7 @@
       <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/6-type-casting/6-type-casting.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/6-type-casting/6-type-casting.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/java/2-Mini-bytes/7-Framework-Component model in java/7-Framework-Component model in java.iml" filepath="$PROJECT_DIR$/code/java/2-Mini-bytes/7-Framework-Component model in java/7-Framework-Component model in java.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/7-SOLID principles/7-SOLID principles.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/7-SOLID principles/7-SOLID principles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/java/8-IO/8-IO.iml" filepath="$PROJECT_DIR$/code/java/8-IO/8-IO.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/8-Inheritance-I/8-Inheritance-I.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/8-Inheritance-I/8-Inheritance-I.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/java/2-Mini-bytes/8-generic types/8-generic types.iml" filepath="$PROJECT_DIR$/code/java/2-Mini-bytes/8-generic types/8-generic types.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/java/1-OOP/9-Interface vs AbstractClasses/9-Interface vs AbstractClasses.iml" filepath="$PROJECT_DIR$/code/java/1-OOP/9-Interface vs AbstractClasses/9-Interface vs AbstractClasses.iml" />
