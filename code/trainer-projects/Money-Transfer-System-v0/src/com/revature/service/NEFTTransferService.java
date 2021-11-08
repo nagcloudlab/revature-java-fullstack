@@ -5,7 +5,7 @@ import com.revature.repository.AccountRepository;
 
 public class NEFTTransferService implements TransferService{
 
-    private AccountRepository accountRepository; // abstraction of account-repository
+    private AccountRepository accountRepository; // abstraction of account-com.revature.repository
 
     // constructor
     public NEFTTransferService(AccountRepository accountRepository){
