@@ -1,0 +1,8 @@
+
+
+
+level of log-messages
+------------------------
+
+
+ DEBUG -> INFO -> WARN -> ERROR -> FATAL
