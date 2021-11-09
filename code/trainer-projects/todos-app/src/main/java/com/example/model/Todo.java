@@ -1,6 +1,8 @@
 package com.example.model;
 
 
+import java.util.Objects;
+
 // Object Model
 public class Todo {
 
@@ -64,5 +66,18 @@ public class Todo {
                 ", title='" + title + '\'' +
                 ", completed=" + completed +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Todo todo = (Todo) o;
+        return id == todo.id && completed == todo.completed && Objects.equals(title, todo.title);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, completed);
     }
 }

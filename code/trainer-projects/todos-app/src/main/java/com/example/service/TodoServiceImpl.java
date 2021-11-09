@@ -65,4 +65,5 @@ public class TodoServiceImpl implements TodoService {
     public List<Todo> getTodos(TodoFilter todoFilter) {
         return todoRepository.findAll(todoFilter,user.getId());
     }
+
 }
