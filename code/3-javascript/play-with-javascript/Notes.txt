@@ -1,0 +1,21 @@
+
+
+
+
+
+------------------------------------------------------------------------------
+ECMA , in ES6,  ES-modules
+------------------------------------------------------------------------------
+
+
+
+ ==> every .js file is module
+ ==> all variables/functions in a .js file are private by default
+ ==> to abstract/export any member(s) ( var / function ) to other module,
+     use 'export' keyword 
+ ==> to require/import any module , use 'import' keyword
+ ==> group related modules as package with description file ( package.json )
+
+ imp-note : neither Node.js nor browser  implemented this standard as default module standard, 
+            
+--------------------------------------------------------------------------------           
