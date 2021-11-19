@@ -89,24 +89,26 @@ function loadAndRenderTodos(limit = 5) {
     // XHR API to send HTTP Request backend APIS
     const url = `https://jsonplaceholder.typicode.com/todos?_limit=${limit}`
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', url, false); // sync request
+    xhr.open('GET', url, true); // async request
     xhr.send()
+    document.getElementById('progress-message').innerText = "Loading todos.."
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            document.getElementById('progress-message').innerText = ""
+            const jsonText = xhr.responseText;
+            // parse json-text to javascript array
+            const todos = JSON.parse(jsonText)
+            const todoListElements = todos.map(todo => {
+                return `
+                    <li class="list-group-item ${todo.completed ? ' bg-success' : ''}">
+                        <span class="badge bg-secondary">${todo.id}</span>
+                        <span>${todo.title}</span>
+                        <span class="badge bg-secondary">${todo.completed}</span>
+                    </li>
+                `
+            })
+            todoListEle.innerHTML = todoListElements.join("");
+        }
+    }
 
-    const jsonText = xhr.responseText;
-    // parse json-text to javascript array
-    const todos = JSON.parse(jsonText)
-
-    const todoListElements = todos.map(todo => {
-        return `
-        
-            <li class="list-group-item ${todo.completed ? ' bg-success' : ''}">
-                <span class="badge bg-secondary">${todo.id}</span>
-                <span>${todo.title}</span>
-                <span class="badge bg-secondary">${todo.completed}</span>
-            </li>
-
-        `
-    })
-
-    todoListEle.innerHTML = todoListElements.join("");
 }
