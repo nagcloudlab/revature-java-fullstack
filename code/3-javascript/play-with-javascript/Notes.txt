@@ -1,21 +1,51 @@
 
 
+static UI  => data + style 
+dynamic UI => data + style + interactivity
+
+--------------------------------------------------
+
+web UI
+
+static web UI  => HTML + CSS
+dynamic web UI => HTML + CSS + javascript
+
+
+------------------------------------------------------
 
 
 
-------------------------------------------------------------------------------
-ECMA , in ES6,  ES-modules
-------------------------------------------------------------------------------
+why we need .js programs with HTML-page(s) in browser-envi ?
 
 
+using browser provided 'web-apis', 
+.js programs can bring any dynamic-ui activity to web-page 
 
- ==> every .js file is module
- ==> all variables/functions in a .js file are private by default
- ==> to abstract/export any member(s) ( var / function ) to other module,
-     use 'export' keyword 
- ==> to require/import any module , use 'import' keyword
- ==> group related modules as package with description file ( package.json )
 
- imp-note : neither Node.js nor browser  implemented this standard as default module standard, 
-            
---------------------------------------------------------------------------------           
+web-apis ==> w3c standards to use web
+
+
+    => DOM ( Document Object Model ), XHR ( XMLHttpRequest ) Timer
+
+
+Javascript + DOM api
+------------------------
+=> page manipulation
+
+    -> create,retreive,update,delete HTML elements
+    -> can change HTML-element's style ( css )
+    -> can change HTML-element's inner content 
+    -> can change HTML-element's attributes/properties
+    -> can validate all form-fields before submit to server-side-programs
+    -> can create rich/user-friendly UI components to HTML-page like calendar,autocomplete,..
+    
+ 
+
+Javascript + Timer Api
+-------------------------
+=> can execute some actions on timeout or timeinterval
+
+
+Javascript + XHR / Fetch
+------------------------
+=> can communicate with server-side programs async style
