@@ -1,0 +1,4 @@
+
+
+
+=> JPA Basic Mapping Annotation
