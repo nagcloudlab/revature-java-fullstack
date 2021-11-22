@@ -32,8 +32,8 @@ console.log("---------------------------")
  *  imp-note:
  *
  *  ==> by default , javascript runtime has one global-scope
- * 
- *  ==> eacy function call also creates new-scope, 
+ *
+ *  ==> eacy function call also creates new-scope,
  *      which is child of in which scope that function declared/created
  *
  * -------------------------------------------------------------
@@ -110,9 +110,9 @@ console.log("---------------------------")
  * -> variable get hoist
  * -> can re-declare same variable within scope
  * -> no block-scope
- * 
+ *
  * solution:
- * 
+ *
  *  => using 'let' & 'const' keywords with block-scope
  *
  */
@@ -148,12 +148,12 @@ console.log("---------------------------")
 //------------------------------
 
 /**
- * 
+ *
  *  #1 : use 'let' keyword for mutable reference
  *  #2 : use 'const' keyword for immutable refrerence
  *  #3 : avoid 'var' keyword for better/error-free code
- * 
- * 
+ *
+ *
  */
 
 //-----------------------------------------------
