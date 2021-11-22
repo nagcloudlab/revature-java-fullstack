@@ -5,8 +5,8 @@ import { TodoService } from './todo.service'
 
 
 const todoService = new TodoService()
-todoService.addTodo("todo-1")
-todoService.addTodo("todo-2")
+// todoService.addTodo("todo-1")
+// todoService.addTodo("todo-2")
 
 
 //-----------------------------------------------------

@@ -1,0 +1,37 @@
+
+
+
+
+
+Common Problems with JDBC API
+-------------------------------------
+
+==> You must manually handle database connections
+==> You have to write a lot of bulky code.
+==> You have to manually handle associations.
+==> The code isn’t portable to other databases
+
+
+solution:
+
+    ==> ORM frameworks
+
+    e.g
+        - Hibernate   - jboss community
+        - iBatis      - Apache
+        - EclipseLink - Eclipse community
+        - Toplink     - Oracke
+
+  -------------------------------------------------------
+
+  java community
+
+  ORM spec
+
+    => JPA ( Java Persistent API )
+
+    Hibernate implements JPA
+
+
+
+
