@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios' // HTTP client lib , promise  api based
 
 //------------------------------------------
 // Service module (NON-UI logic) e.g n/w calls
