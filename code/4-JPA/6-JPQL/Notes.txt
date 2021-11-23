@@ -1,0 +1,8 @@
+
+
+One-To-Many
+
+
+e.g
+
+    Account has Many Txns
