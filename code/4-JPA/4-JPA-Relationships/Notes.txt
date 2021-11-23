@@ -1,0 +1,16 @@
+
+
+
+
+Entity Relationship
+--------------------------------
+
+
+ - One-To-One
+ - One-To-Many
+ - Many-To-One
+ - Many-To-Many
+
+
+
+
