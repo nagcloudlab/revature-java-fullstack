@@ -12,12 +12,6 @@ public class Todo {
     private String title; // null
     private boolean completed; // false
 
-    public Todo(int id, String title, boolean completed) {
-        this.id = id;
-        this.title = title;
-        this.completed = completed;
-    }
-
     public Todo(String title) {
         this.title = title;
     }

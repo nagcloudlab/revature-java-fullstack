@@ -38,14 +38,33 @@ public class JpaTodoRepository implements TodoRepository{
     }
 
     @Override
-    public List<Todo> findAll() {
+    public List<Todo> findAll(String filter) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
+
         String jpql="from Todo";
+        if(filter.equals("active")){
+            jpql="from Todo where completed=false";
+        }
+        if(filter.equals("completed")){
+            jpql="from Todo where completed=true";
+        }
         Query query=entityManager.createQuery(jpql);
         List<Todo> todos= query.getResultList();
         entityManager.getTransaction().commit();
         entityManager.close();
         return  todos;
+    }
+
+    @Override
+    public Todo findById(int id) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+
+        Todo todo=entityManager.find(Todo.class,id);
+
+        entityManager.getTransaction().commit();
+        entityManager.close();
+        return  todo;
     }
 }

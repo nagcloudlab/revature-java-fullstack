@@ -1,0 +1,11 @@
+
+
+URL
+
+    - query-params
+
+        => to filter resources
+
+    - path-params
+
+        => to identify resource

@@ -8,6 +8,7 @@ public interface TodoRepository {
 
     void save(Todo todo);
     void delete(int id);
-    List<Todo> findAll();
+    List<Todo> findAll(String filter);
+    Todo findById(int id);
 
 }
