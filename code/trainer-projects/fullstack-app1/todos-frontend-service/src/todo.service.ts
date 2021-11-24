@@ -2,7 +2,7 @@ import { TODO_FILTERS } from "./todo.filters";
 import { Todo } from "./todo.model";
 
 
-const url = "http://localhost:8080/todos";
+const url = "http://localhost:8080/users/nag/todos";
 
 class TodoService {
 
@@ -16,7 +16,7 @@ class TodoService {
             method: 'POST',
             body: JSON.stringify({ title }),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json' // Media Type
             }
         })
 
@@ -41,7 +41,7 @@ class TodoService {
         })
     }
     deleteTodo(id: number) {
-        this.todos = this.todos.filter(todo => todo.id !== id)
+        return fetch(`${url}/${id}`, { method: 'DELETE' })
     }
     completeAll() {
         let areAllCompleted = this.todos.every(todo => todo.completed)

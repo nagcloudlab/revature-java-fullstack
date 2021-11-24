@@ -47,8 +47,11 @@ todoListEle.addEventListener('click', e => {
     if (action === 'delete') {
         const id = dataset['id'];
         todoService.deleteTodo(Number.parseInt(id))
+            .then(response => {
+                renderTodos()
+            })
     }
-    renderTodos()
+
 })
 
 

@@ -1,0 +1,69 @@
+
+
+As Service Provider
+--------------------
+
+For 'Todos' Application
+
+how design REST API?
+
+step-1: find all resource(s)
+   
+    - user
+    - todo
+
+step-2: Provide unique indentity using URI & relationship between resource(s)
+   
+    - /api/users
+    - /api/users/{userId}
+    - /api/users/{userId}/todos
+    - /api/users/{userId}/todos{todoId}
+
+step-3: define resource reperesentation(s)
+       
+    
+     /api/users/{userId}/todos
+
+     header : "Accept:application/xml"
+
+
+-------------------------------------------------------------------
+
+path-parameters
+    => resource indentification purpose
+
+query parameters
+    => to filter resource(s)
+
+-------------------------------------------------------------------
+
+HTTP's methods
+
+    => to express intention ( e.g read |write operations ) our request
+
+    GET    ==> to read resource(s)
+    HEAD   ==> to read resource's details not resource  ( e.g size,last-modified,etc..)
+    POST   ==> to create new resource or to perform any control-operations ( e.g login,register..)
+    PUT    ==> to create new resource if not exist else to update existing resource
+    PATCH  ==> to perform partial-update
+    DELETE ==> to delete existing resource
+    OPTION ==> to get user's authorities on the resource  
+
+
+---------------------------------------------------------------------------------------
+
+
+PUT
+    => to create resources with known identity like id,email, any unique property
+
+POST
+    => to create new resource
+
+----------------------------------------------------------------------    
+
+
+HTTP status codes
+
+    => to indicate status of Response to client applications
+
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types

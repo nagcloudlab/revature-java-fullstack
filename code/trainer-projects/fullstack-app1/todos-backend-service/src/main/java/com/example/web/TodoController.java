@@ -22,8 +22,10 @@ public class TodoController {
     static TodoRepository todoRepository = new JpaTodoRepository(entityManagerFactory);
     //--------------------------------------------------
 
-    public static Handler postTodo = ctx -> {
-        Todo todo=ctx.bodyAsClass(Todo.class);
+    public static Handler createTodo = ctx -> {
+        String userId=ctx.pathParam("userId");
+        System.out.println(userId);
+        Todo todo = ctx.bodyAsClass(Todo.class);
         todoRepository.save(todo);
         ctx.status(HttpStatus.CREATED_201);
     };
@@ -40,7 +42,10 @@ public class TodoController {
     public static Handler getTodo = ctx -> {
         int id = Integer.parseInt(ctx.pathParam("id"));
         Todo todo = todoRepository.findById(id);
-        ctx.json(todo);
+        if (todo == null) {
+            ctx.status(HttpStatus.NOT_FOUND_404);
+        } else
+            ctx.json(todo);
     };
 
     public static Handler deleteTodo = ctx -> {
