@@ -1,0 +1,15 @@
+
+-----------------------------------
+
+ UI = data + style + interactvity
+ web-UI = HTML + CSS + Javascript
+
+ -----------------------------------
+
+
+Module bundler & loader
+
+    -> webpack
+    
+-------------------------------------
+
