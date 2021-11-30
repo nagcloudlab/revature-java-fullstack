@@ -18,6 +18,9 @@ export class VotingBoxComponent {
 
   handleVote(event: any) {
     let { itemName, value } = event; // de-structuring
+    // or
+    // let itemName=event.itemName;
+    // let value=event.value
     let votingLine = this.voteLines.find(line => line.itemName === itemName);
     if (votingLine) {
       if (value > 0)

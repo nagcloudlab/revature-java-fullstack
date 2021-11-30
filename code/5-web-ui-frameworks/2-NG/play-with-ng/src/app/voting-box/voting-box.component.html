@@ -2,7 +2,7 @@
     <div class="card-header">Voting Box</div>
     <div class="card-body">
         <div class="row">
-            <div class="col-3" *ngFor="let item of items">
+            <div class="col-xs-12 col-sm-4 col-md-3" *ngFor="let item of items">
                 <app-voting-item (vote)="handleVote($event)" [itemName]="item">
                 </app-voting-item>
             </div>

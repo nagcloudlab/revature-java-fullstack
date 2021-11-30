@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product',
@@ -11,11 +11,17 @@ export class ProductComponent {
 
   currentTab: number = 1;
 
+  @Output() buy = new EventEmitter()
+
   handleTabChange(e: Event, tabIndex: number) {
+    e.preventDefault();
     // console.log("handling tab change..");
     // console.log(e);
     // console.log(tabIndex);
     this.currentTab = tabIndex;
+  }
+  handleBuy(event: Event) {
+    this.buy.emit(this.product)
   }
 
 }

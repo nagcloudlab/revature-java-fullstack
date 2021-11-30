@@ -2,21 +2,23 @@
     <div class="alert alert-info">No Votes</div>
 </div>
 
-<table class="table" *ngIf="voteLines.length>0">
-    <thead>
-        <tr>
-            <th>Item</th>
-            <th>+ve</th>
-            <th>-ve</th>
-            <th>All</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr [ngClass]="{'bg-danger':line.n>=10}" *ngFor="let line of voteLines">
-            <td>{{line.itemName}}</td>
-            <td>{{line.p}}</td>
-            <td>{{line.n}}</td>
-            <td>{{line.p+line.n}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table" *ngIf="voteLines.length>0">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>+ve</th>
+                <th>-ve</th>
+                <th>All</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr [ngClass]="{'bg-danger':line.n>=10}" *ngFor="let line of voteLines">
+                <td>{{line.itemName}}</td>
+                <td>{{line.p}}</td>
+                <td>{{line.n}}</td>
+                <td>{{line.p+line.n}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

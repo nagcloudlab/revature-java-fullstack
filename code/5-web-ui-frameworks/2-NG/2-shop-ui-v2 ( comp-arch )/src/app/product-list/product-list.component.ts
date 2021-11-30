@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product-list',
@@ -26,5 +26,11 @@ export class ProductListComponent {
     },
   ]
 
+  @Output()
+  buy = new EventEmitter();
+
+  addToCart(event: any) {
+    this.buy.emit(event)
+  }
 
 }

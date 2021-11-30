@@ -1,8 +1,5 @@
 <div class="card card-body">
-
-
     <div *ngFor="let product of products">
-        <app-product [value]="product"></app-product>
+        <app-product (buy)="addToCart($event)" [value]="product"></app-product>
     </div>
-
 </div>
