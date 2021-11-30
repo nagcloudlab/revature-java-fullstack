@@ -4,8 +4,11 @@
             <img class="img-fluid" alt="" [src]="product.imagePath" />
         </div>
         <div class="col-8">
-            <div>{{product.name}}</div>
-            <div>{{product.price}}</div>
+
+            <pre>{{product|json}}</pre>
+
+            <div>{{product.name|uppercase}} - {{product.makeDate|date:'MMM-yyyy'}}</div>
+            <div>{{product.price | discount:product.discountPrice | currency:'INR':'symbol'}}</div>
             <button (click)="handleBuy($event)" class="btn btn-dark">buy</button>
 
             <ul class="nav nav-tabs">
@@ -23,7 +26,7 @@
                         href>Reviews</a>
                 </li>
             </ul>
-            <div *ngIf="currentTab===1">{{product.description}}</div>
+            <div *ngIf="currentTab===1">{{product.description | slice:0:500}}</div>
             <div *ngIf="currentTab===2">Not Yet</div>
             <div *ngIf="currentTab===3">None Yet</div>
 

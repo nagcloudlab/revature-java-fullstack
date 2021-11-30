@@ -7,6 +7,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import { CartViewComponent } from './cart-view/cart-view.component';
 import { CartBadgeComponent } from './cart-badge/cart-badge.component';
+import { DiscountPipe } from './discount.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CartBadgeComponent } from './cart-badge/cart-badge.component';
     ProductListComponent,
     ProductComponent,
     CartViewComponent,
-    CartBadgeComponent
+    CartBadgeComponent,
+    DiscountPipe
   ],
   imports: [
     BrowserModule

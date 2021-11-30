@@ -14,7 +14,9 @@ export class ProductListComponent {
       price: 149000,
       description: 'New Pro',
       isAvailable: true,
-      imagePath: 'assets/Laptop.png'
+      imagePath: 'assets/Laptop.png',
+      makeDate: Date.now(),
+      discountPrice: 10000
     },
     {
       id: 2,
@@ -22,7 +24,8 @@ export class ProductListComponent {
       price: 14000,
       description: 'New Model',
       isAvailable: true,
-      imagePath: 'assets/Mobile.png'
+      imagePath: 'assets/Mobile.png',
+      makeDate: Date.now()
     },
   ]
 
