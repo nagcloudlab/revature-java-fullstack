@@ -9,6 +9,7 @@ import { ProductComponent } from './product/product.component';
 import { CartViewComponent } from './cart-view/cart-view.component';
 import { CartBadgeComponent } from './cart-badge/cart-badge.component';
 import { DiscountPipe } from './discount.pipe';
+import { ReviewComponent } from './review/review.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DiscountPipe } from './discount.pipe';
     ProductComponent,
     CartViewComponent,
     CartBadgeComponent,
-    DiscountPipe
+    DiscountPipe,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,

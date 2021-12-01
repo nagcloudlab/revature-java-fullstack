@@ -28,7 +28,11 @@
             </ul>
             <div *ngIf="currentTab===1">{{product.description | slice:0:500}}</div>
             <div *ngIf="currentTab===2">Not Yet</div>
-            <div *ngIf="currentTab===3">None Yet</div>
+            <div *ngIf="currentTab===3">
+                <div *ngFor="let rev of reviews">
+                    <app-review [value]="rev"></app-review>
+                </div>
+            </div>
 
         </div>
     </div>

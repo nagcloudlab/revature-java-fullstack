@@ -30,6 +30,7 @@ public class ShopApiServerApplication {
 
         // Routes
         app.get("/api/products", ProductController.get);
+        app.get("/api/products/{productId}/reviews", ProductController.getReviews);
 
     }
 

@@ -6,11 +6,17 @@ import { Injectable } from '@angular/core';
 })
 export class ProductService {
 
+  apiUrl = "http://localhost:8080/api/products"
+
   constructor(private httpClient: HttpClient) { }
 
   getProducts() {
-    // uses browser's XHR API
-    return this.httpClient.get("http://localhost:8080/api/products")
+    return this.httpClient
+      .get(this.apiUrl)
+  }
+  getReviews(productId: number) {
+    return this.httpClient
+      .get(`${this.apiUrl}/${productId}/reviews`)
   }
 
 }
