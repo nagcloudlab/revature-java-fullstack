@@ -1,0 +1,22 @@
+<div class="alert alert-warning" *ngIf="products.length===0">
+    No Products
+</div>
+
+<table class="table" *ngIf="products.length!==0">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>isAvaiable</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price|currency:'INR'}}</td>
+            <td>{{product.is_available}}</td>
+        </tr>
+    </tbody>
+</table>
