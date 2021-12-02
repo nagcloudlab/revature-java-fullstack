@@ -28,6 +28,36 @@ public class JpaProductRepository implements ProductRepository{
     }
 
     @Override
+    public Product findById(int productId) {
+        EntityManager entityManager= entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        Product product=entityManager.find(Product.class,productId);
+        entityManager.getTransaction().commit();
+        entityManager.close();;
+        return product;
+    }
+
+
+
+    @Override
+    public void save(Product product) {
+        EntityManager entityManager= entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist(product);
+        entityManager.getTransaction().commit();
+        entityManager.close();;
+    }
+
+    @Override
+    public void delete(int productId) {
+        EntityManager entityManager= entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.remove(entityManager.find(Product.class,productId));
+        entityManager.getTransaction().commit();
+        entityManager.close();;
+    }
+
+    @Override
     public List<Review> findAllReviews(int productId) {
         EntityManager entityManager= entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();

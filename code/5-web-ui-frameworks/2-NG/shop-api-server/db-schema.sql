@@ -23,11 +23,11 @@ create table reviews(
 
 
 insert into products(name,price,description,is_available,image_path,make_date)
-values ('Laptop',10000,'New Pro',true,'assets/laptop.png','2017-06-15')
+values ('Laptop',10000,'New Pro',true,'assets/laptop.png','2017-06-15');
 
 
 insert into products(name,price,description,is_available,image_path,make_date)
-values ('Mobile',10000,'New Pro',true,'assets/mobile.png','2017-06-15')
+values ('Mobile',10000,'New Pro',true,'assets/mobile.png','2017-06-15');
 
 
 insert into reviews(author,stars,body,product_id) values('who1',5,'good laptop',1);

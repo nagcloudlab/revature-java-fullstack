@@ -1,6 +1,7 @@
 package com.example.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="products")
@@ -14,6 +15,9 @@ public class Product {
     private String description;
     private String image_path;
     private boolean is_available;
+
+    @OneToMany(mappedBy = "product",cascade = CascadeType.REMOVE)
+    private List<Review> reviews;
 
     public Product(int id, String name, double price, String description, String image_path, boolean is_available) {
         this.id = id;

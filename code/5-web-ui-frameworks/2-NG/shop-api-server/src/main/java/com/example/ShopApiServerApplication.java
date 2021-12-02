@@ -28,8 +28,13 @@ public class ShopApiServerApplication {
         // REST API
         //------------------------------------
 
+        // http://localhost:8080/
+
         // Routes
-        app.get("/api/products", ProductController.get);
+        app.get("/api/products", ProductController.getAll);
+        app.get("/api/products/{productId}", ProductController.get);
+        app.post("/api/products",ProductController.create);
+        app.delete("/api/products/{productId}",ProductController.delete);
         app.get("/api/products/{productId}/reviews", ProductController.getReviews);
 
     }
