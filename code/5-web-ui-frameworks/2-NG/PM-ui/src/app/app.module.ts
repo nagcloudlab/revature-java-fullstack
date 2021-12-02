@@ -9,17 +9,50 @@ import { HomeComponent } from './home/home.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductsResolver } from './products.resolver';
+import { ProductViewComponent } from './product-view/product-view.component';
+import { ProductResolver } from './product.resolver';
+import { AuthGuard } from './auth.guard';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { FormStatusGuard } from './form-status.guard';
+import { ProductDetailViewGuard } from './product-detail-view.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
-  { path: 'new', component: ProductFormComponent },
+  {
+    path: 'new',
+    component: ProductFormComponent,
+    canActivate: [AuthGuard],
+    canDeactivate: [FormStatusGuard]
+  },
   {
     path: 'list',
     resolve: {
       products: ProductsResolver
     },
+    canActivateChild: [ProductDetailViewGuard],
     component: ProductListComponent,
+    children: [
+      {
+        path: "view/:productId",
+        resolve: {
+          product: ProductResolver
+        },
+        component: ProductViewComponent
+      }
+    ]
+  },
+  {
+    path: "edit/:productId",
+    resolve: {
+      product: ProductResolver
+    },
+    component: ProductFormComponent
+  },
+  {
+    path: 'login',
+    component: LoginFormComponent
   }
+
 ]
 
 @NgModule({
@@ -27,7 +60,9 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     ProductFormComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductViewComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
