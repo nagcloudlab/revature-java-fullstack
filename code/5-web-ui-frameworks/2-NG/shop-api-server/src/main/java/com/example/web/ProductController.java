@@ -28,6 +28,13 @@ public class ProductController {
         productRepository.save(product);
         ctx.status(HttpStatus.CREATED_201);
     };
+    public static Handler update= ctx->{
+        Product product=ctx.bodyAsClass(Product.class);
+        int productId=Integer.parseInt(ctx.pathParam("productId"));
+        product.setId(productId);
+        productRepository.update(product);
+        ctx.status(HttpStatus.CREATED_201);
+    };
     public static Handler delete= ctx->{
         int productId=Integer.parseInt(ctx.pathParam("productId"));
         productRepository.delete(productId);

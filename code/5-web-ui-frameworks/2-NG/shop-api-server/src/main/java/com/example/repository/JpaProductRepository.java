@@ -48,6 +48,16 @@ public class JpaProductRepository implements ProductRepository{
         entityManager.close();;
     }
 
+
+    @Override
+    public void update(Product product) {
+        EntityManager entityManager= entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.merge(product);
+        entityManager.getTransaction().commit();
+        entityManager.close();;
+    }
+
     @Override
     public void delete(int productId) {
         EntityManager entityManager= entityManagerFactory.createEntityManager();

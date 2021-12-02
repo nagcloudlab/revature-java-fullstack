@@ -34,6 +34,7 @@ public class ShopApiServerApplication {
         app.get("/api/products", ProductController.getAll);
         app.get("/api/products/{productId}", ProductController.get);
         app.post("/api/products",ProductController.create);
+        app.put("/api/products/{productId}",ProductController.update);
         app.delete("/api/products/{productId}",ProductController.delete);
         app.get("/api/products/{productId}/reviews", ProductController.getReviews);
 

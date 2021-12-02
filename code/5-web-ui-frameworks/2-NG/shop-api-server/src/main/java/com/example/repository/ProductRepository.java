@@ -11,6 +11,7 @@ public interface ProductRepository {
     Product findById(int productId);
     List<Review> findAllReviews(int productId);
     void save(Product product);
+    void update(Product product);
     void delete(int productId);
 
 }
