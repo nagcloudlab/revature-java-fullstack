@@ -1,4 +1,5 @@
-import { Component, Input, Output, EventEmitter, SimpleChange } from "@angular/core";
+import { Component, Input, Output, ViewChild, EventEmitter, SimpleChange, ElementRef } from "@angular/core";
+import { CatService } from "./cat.service";
 
 
 @Component({
@@ -11,6 +12,8 @@ export class CatComponent {
     @Input("img") image = "assets/tom.png"
     isImgVisibile = false
     @Output() sound = new EventEmitter() // custom cat event
+
+    // @ViewChild("catbox") catBox!: ElementRef;
 
     time = new Date().toLocaleTimeString()
     intervalId: any = null;
@@ -64,6 +67,22 @@ export class CatComponent {
         console.log("CatComponent :: ngOnDestroy " + this.name);
     }
 
+
+    // why we need
+    /*
+        can reference View Elements,
+        and can peform any side effects on view elements
+    */
+    // ngAfterViewInit() {
+    //     console.log("CatComponent::ngAfterViewInit");
+    //     const domEle = this.catBox.nativeElement
+    //     domEle.addEventListener('mouseenter', (e: any) => {
+    //         domEle.style.backgroundColor = "#DEF"
+    //     })
+    //     domEle.addEventListener('mouseleave', (e: any) => {
+    //         domEle.style.backgroundColor = "#FFF"
+    //     })
+    // }
 
 
 }
