@@ -1,0 +1,25 @@
+<div class="container">
+  <hr />
+  <h1>NG-Mini-bytes</h1>
+  <hr />
+
+  <button (click)="addNewCat($event)">Add New Cat</button>
+  &nbsp;
+  <button (click)="changeCatName($event)">Change Cat Name</button>
+  <button (click)="changeCatImage($event)">Change Cat Image</button>
+  &nbsp;
+  <button (click)="removeCat($event)">Remove Cat</button>
+
+  <hr />
+
+  <div class="row">
+    <div *ngFor="let cat of cats;let idx=index">
+      <app-cat [value]="cat.name" [img]="cat.image" (sound)="handleCatSound($event)"></app-cat>
+    </div>
+  </div>
+
+
+
+
+
+</div>
