@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -7,11 +8,9 @@ import {BehaviorSubject} from "rxjs";
 export class TodosService {
 
 
-  private todos: Array<any> = [
-    {id: 1, title: 'task-1', completed: true},
-    {id: 2, title: 'task-2', completed: true},
-    {id: 3, title: 'task-3', completed: false}
-  ]
+  private todos: Array<any> = []
+
+  constructor(private httpClient:HttpClient) {}
 
   todosStream=new BehaviorSubject({
     filter:'ALL',
@@ -25,6 +24,21 @@ export class TodosService {
     COMPLETED:(todo:any)=>todo.completed
   }
 
+  getTodos(){
+    this.httpClient.get("http://localhost:8080/users/nag/todos")
+      .subscribe({
+          next: (response:any) => {
+            this.todos=response;
+            this.todosStream.next({
+              filter: 'All',
+              action: 'LOAD_TODOS',
+              todos:this.todos
+            })
+          }
+        }
+      )
+  }
+
   filterTodos(filter='ALL') {
     let filteredTodos=this.todos.filter(this.TODO_FILTERS[filter])
     this.todosStream.next({
@@ -36,13 +50,19 @@ export class TodosService {
 
   addTodo(newTodo:any){
    return new Promise((resolve,reject)=>{
-     this.todos.push(newTodo);
-     this.todosStream.next({
-       filter: 'ALL',
-       action:'ADD_TODO',
-       todos:this.todos
+     this.httpClient.post("http://localhost:8080/users/nag/todos",{
+       title:newTodo.title
+     }).subscribe({
+       next:e=>{
+         this.todos.push(newTodo);
+         this.todosStream.next({
+           filter: 'ALL',
+           action:'ADD_TODO',
+           todos:this.todos
+         })
+         resolve(true)
+       }
      })
-     resolve(true)
    })
   }
 
@@ -61,12 +81,18 @@ export class TodosService {
   }
 
   deleteTodo(todoId: number) {
-    this.todos = this.todos.filter(todo => todo.id !== todoId);
-    this.todosStream.next({
-      filter: 'ALL',
-      action:'DELETE_TODO',
-      todos:this.todos
-    })
+
+    this.httpClient.delete("http://localhost:8080/users/nag/todos/"+todoId).subscribe({
+      next:e=>{
+        this.todos = this.todos.filter(todo => todo.id !== todoId);
+        this.todosStream.next({
+          filter: 'ALL',
+          action:'DELETE_TODO',
+          todos:this.todos
+        })
+      }
+    });
+
   }
 
   clearCompleted(){

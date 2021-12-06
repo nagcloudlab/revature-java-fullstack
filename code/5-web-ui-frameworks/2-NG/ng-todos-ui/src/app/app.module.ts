@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MaterialModule} from "./material.module";
 import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 
 const routes:Routes=[
@@ -32,6 +33,7 @@ const routes:Routes=[
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatNativeDateModule,
     MaterialModule,
