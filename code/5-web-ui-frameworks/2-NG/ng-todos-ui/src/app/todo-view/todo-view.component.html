@@ -1,0 +1,17 @@
+
+
+<li class="list-group-item">
+  <div class="d-flex justify-content-between">
+    <span>
+      <input type="checkbox"
+                 [checked]="todo.completed"
+                (change)="handleComplete($event,todo.id)"
+      />
+    </span>
+    <span>{{todo.title}}</span>
+    <button class="btn btn-sm btn-danger"
+            (click)="handleDelete($event,todo.id)">
+      delete
+    </button>
+  </div>
+</li>
