@@ -1,0 +1,47 @@
+
+
+
+
+what is spring-framework ?
+
+
+    => java Application framework,
+       manages (creating , assembling) components/beans using dependency inversion principle
+
+ How to configure spring-framework?
+
+    3 ways
+
+    1. XML
+
+        advantages:
+
+            - centralized configuration
+
+        disadvantages:
+
+             - more verbose
+             - very difficult express dynamic configuration over XML document
+
+    2. Annotation
+
+        advantages:
+
+            - concise, simple to use over java code
+
+        disadvantages:
+
+            - configuration scattered over many java-files
+            - we can use annotation java code that we write
+
+    3. Java-Config
+
+        - overcome limitations of XML & Annotation config
+
+
+     conclusion:
+
+        best approach:
+
+
+            - Annotation + Java-based configuration
