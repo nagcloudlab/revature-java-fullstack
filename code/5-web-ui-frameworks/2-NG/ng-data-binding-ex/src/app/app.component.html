@@ -1,0 +1,26 @@
+<div>
+  <hr />
+  <h1>{{title}}</h1>
+  <button (click)="handleTitleChange($event)">change title</button>
+  <hr />
+  <img [src]="lightImage" />
+  <button (click)="toggleLight($event)">toggle light</button>
+
+  <hr />
+
+
+  2-way-binding
+  <hr />
+
+  <form >
+  Name : <input [(ngModel)]="myName" />
+</form>
+
+  <hr />
+
+  Hello , {{myName}}
+
+  <button (click)="resetMyName()">Reset</button>
+
+
+</div>
