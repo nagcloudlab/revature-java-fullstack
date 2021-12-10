@@ -1,0 +1,73 @@
+
+<div class="row">
+  <!--
+  <div class="col-md-5">
+    <hr/>
+    FormModel
+    <hr/>
+    <pre>
+      {{todoFormGroup.value | json}}
+    </pre>
+    <hr/>
+    FormGroup status
+    <hr/>
+     <pre>
+       is Pristine : {{todoFormGroup.pristine}}
+       is Dirty    : {{todoFormGroup.dirty}}
+       is Valid    : {{todoFormGroup.valid}}
+       is Invalid  : {{todoFormGroup.invalid}}
+       is touched  : {{todoFormGroup.touched}}
+       is untouched: {{todoFormGroup.untouched}}
+     </pre>
+    <hr/>
+    FormControl status ( e.g Title )
+    <hr/>
+    <pre>
+       is Pristine: {{todoFormGroup.controls['title'].pristine}}
+      is Dirty    : {{todoFormGroup.controls['title'].dirty}}
+      is Valid    : {{todoFormGroup.controls['title'].valid}}
+      is Invalid  : {{todoFormGroup.controls['title'].invalid}}
+      is touched  : {{todoFormGroup.controls['title'].touched}}
+      is untouched: {{todoFormGroup.controls['title'].untouched}}
+     </pre>
+  </div>
+  -->
+  <div class="col-md-5">
+    <div class="card">
+      <div class="card-header">Todo Form</div>
+      <div class="card-body">
+        <form (submit)="handleSubmit($event)" [formGroup]="todoFormGroup">
+          <div class="form-group">
+            <label>Title</label>
+              <input class="form-control"
+                     formControlName="title">
+            <!--
+            <div *ngIf="todoFormGroup.controls['title'].touched && todoFormGroup.controls['title'].invalid" class="text-danger">
+              <div *ngIf="todoFormGroup.controls['title'].errors?.required">title is required</div>
+              <div *ngIf="todoFormGroup.controls['title'].errors?.minlength">title minimum 3 chars required </div>
+            </div>
+            -->
+            <div class="text-danger">
+              {{errors['title']}}
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Type</label>
+           <select class="form-control"
+                   formControlName="type">
+             <option value="Home">Home</option>
+             <option value="Office">Office</option>
+           </select>
+          </div>
+           <div class="mt-2 form-group">
+             <label>Date</label>
+             <input class="form-control"
+                    formControlName="date" type="date">
+           </div>
+          <br/>
+          <button class="btn btn-dark">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

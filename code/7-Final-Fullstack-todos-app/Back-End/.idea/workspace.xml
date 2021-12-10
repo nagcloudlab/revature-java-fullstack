@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="882e3ea3-f46c-4a02-b5cc-ae9b7081be56" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/Notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/src/main/java/com/example/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/src/main/java/com/example/model/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/src/main/java/com/example/repository/AccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/src/main/java/com/example/repository/JdbcAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/src/main/java/com/example/repository/JpaAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/src/main/java/com/example/service/TransferService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/src/main/java/com/example/service/TransferServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/src/main/resources/transfer-service.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/1-transfer-service-v1(XML-config))/target/classes/transfer-service.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/Notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/src/main/java/com/example/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/src/main/java/com/example/model/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/src/main/java/com/example/repository/AccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/src/main/java/com/example/repository/JdbcAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/src/main/java/com/example/repository/JpaAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/src/main/java/com/example/service/TransferService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/src/main/java/com/example/service/TransferServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/src/main/resources/transfer-service.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/2-transfer-service-v2(Anno-config)/target/classes/transfer-service.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/Notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/src/main/java/com/example/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/src/main/java/com/example/config/TransferServiceConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/src/main/java/com/example/model/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/src/main/java/com/example/repository/AccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/src/main/java/com/example/repository/JdbcAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/src/main/java/com/example/repository/JpaAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/src/main/java/com/example/service/TransferService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/3-transfer-service-v3(Java-config)/src/main/java/com/example/service/TransferServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/src/main/java/com/example/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/src/main/java/com/example/config/JpaConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/src/main/java/com/example/config/TransferServiceConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/src/main/java/com/example/entity/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/src/main/java/com/example/repository/AccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/src/main/java/com/example/repository/JdbcAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/src/main/java/com/example/repository/JpaAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/src/main/java/com/example/service/TransferService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/4-transfer-service-v4(spring-with-JPA)/src/main/java/com/example/service/TransferServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/src/main/java/com/example/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/src/main/java/com/example/config/TransferServiceConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/src/main/java/com/example/entity/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/src/main/java/com/example/repository/AccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/src/main/java/com/example/repository/JpaAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/src/main/java/com/example/service/TransferService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/src/main/java/com/example/service/TransferServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/5-transfer-service-v4(spring-boot)/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/src/main/java/com/example/TodosServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/src/main/java/com/example/entity/Todo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/src/main/java/com/example/entity/TodoType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/src/main/java/com/example/repository/TodoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/src/main/java/com/example/web/NewTodosController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/src/main/java/com/example/web/TodosController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/src/main/java/com/example/web/WelcomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/6-todos-service-v1/src/test/java/com/example/TodosServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/java/com/example/TodosServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/java/com/example/entity/Todo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/java/com/example/entity/TodoType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/java/com/example/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/java/com/example/repository/TodoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/java/com/example/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/java/com/example/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/java/com/example/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/java/com/example/web/TodoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/java/com/example/web/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/java/com/example/web/WelcomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/java/com/example/web/payload/HttpResponseBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-spring/7-todos-service-v2/src/test/java/com/example/TodosServiceApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="223O69wimHqU8qL7eQhOx6ztpgR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TodosServiceApplication">
+    <configuration name="All in todos-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todos-service" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodosServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="todos-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.TodosServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in todos-service" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="882e3ea3-f46c-4a02-b5cc-ae9b7081be56" name="Changes" comment="" />
+      <created>1639062625326</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639062625326</updated>
+      <workItem from="1639062627232" duration="8469000" />
+      <workItem from="1639071651116" duration="4261000" />
+      <workItem from="1639166302097" duration="1172000" />
+      <workItem from="1639167485732" duration="1000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
