@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import jwt_decode from "jwt-decode";
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +9,23 @@ import { BehaviorSubject } from 'rxjs';
 export class UserService {
 
   userStream: BehaviorSubject<any> = new BehaviorSubject({})
+  userName: string | null = null
+
+  decodeToken() {
+    let token = localStorage.getItem("token");
+    if (token) {
+      const decoded: any = jwt_decode(token);
+      this.userName = decoded.sub;
+    }
+  }
 
   doLogin(credentials: any) {
     this.httpClient.post("http://localhost:8080/login", credentials)
       .subscribe({
         next: (response: any) => {
           localStorage.setItem("token", response.jwt);
+          const decoded: any = jwt_decode(response.jwt);
+          this.userName = decoded.sub;
           this.userStream.next({
             action: "LOGIN_SUCCESS",
           })
@@ -53,6 +65,11 @@ export class UserService {
       return true;
     else
       return false;
+  }
+
+  getToken() {
+    let token = localStorage.getItem("token") || null
+    return token;
   }
 
   constructor(private httpClient: HttpClient) { }

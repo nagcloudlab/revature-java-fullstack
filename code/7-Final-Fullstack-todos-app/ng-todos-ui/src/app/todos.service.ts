@@ -25,11 +25,7 @@ export class TodosService {
   }
 
   getTodos() {
-    this.httpClient.get("http://localhost:8080/api/todos", {
-      headers: {
-        "Authorization": "Bearer " + localStorage.getItem('token')
-      }
-    })
+    this.httpClient.get("http://localhost:8080/api/todos")
       .subscribe({
         next: (response: any) => {
           this.todos = response;
@@ -55,7 +51,8 @@ export class TodosService {
   addTodo(newTodo: any) {
     return new Promise((resolve, reject) => {
       this.httpClient.post("http://localhost:8080/api/todos", {
-        title: newTodo.title
+        title: newTodo.title,
+        type: newTodo.type
       }).subscribe({
         next: e => {
           this.todos.push(newTodo);

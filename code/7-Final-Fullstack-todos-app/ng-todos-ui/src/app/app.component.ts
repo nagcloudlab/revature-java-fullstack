@@ -9,7 +9,7 @@ import { UserService } from './user.service';
 })
 export class AppComponent {
   title = 'ng-todos-ui';
-
+  userName: string | null = null
   isLoggedIn = false;
 
   handleLogout() {
@@ -17,14 +17,18 @@ export class AppComponent {
   }
 
   ngOnInit() {
+    this.userService.decodeToken();
     this.isLoggedIn = this.userService.isLoggedIn()
+    this.userName = this.userService.userName;
     this.userService.userStream
       .subscribe((e: any) => {
         if (e.action === "LOGIN_SUCCESS") {
           this.isLoggedIn = this.userService.isLoggedIn()
+          this.userName = this.userService.userName;
         }
         if (e.action === "LOGOUT_SUCCESS") {
           this.isLoggedIn = this.userService.isLoggedIn()
+          this.userName = null;
           this.router.navigate(['/login-form'])
         }
       })
