@@ -14,14 +14,21 @@ import { MaterialModule } from "./material.module";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { LoginFormComponent } from './login-form/login-form.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
   { path: '', pathMatch: "full", redirectTo: 'login-form' },
   { path: 'todo-list', pathMatch: "full", redirectTo: 'todo-list/all' },
-  { path: 'todo-list/:filter', component: TodoListComponent },
+  {
+    path: 'todo-list/:filter',
+    component: TodoListComponent,
+    canActivate: [AuthGuard]
+  },
   { path: 'new-todo', component: TodoFormComponent },
-  { path: 'login-form', component: LoginFormComponent }
+  { path: 'login-form', component: LoginFormComponent },
+  { path: 'register-form', component: RegisterFormComponent }
 ];
 
 @NgModule({
@@ -31,7 +38,8 @@ const routes: Routes = [
     TodoListComponent,
     TodoViewComponent,
     TodosFooterComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserAnimationsModule,

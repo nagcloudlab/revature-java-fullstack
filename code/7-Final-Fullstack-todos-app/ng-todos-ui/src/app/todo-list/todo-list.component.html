@@ -1,10 +1,12 @@
-
-
 <div class="row">
   <div class="col-md-7">
+    <!-- 
+      <div class="alert alert-warning" *ngIf="todos.length===0">
+        No todos
+    </div> 
+    -->
     <ul class="list-group">
-      <app-todo-view *ngFor="let todo of todos"
-                     [value]="todo">
+      <app-todo-view *ngFor="let todo of todos" [value]="todo">
       </app-todo-view>
     </ul>
     <app-todos-footer></app-todos-footer>

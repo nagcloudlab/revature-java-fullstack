@@ -10,6 +10,8 @@ import { UserService } from '../user.service';
 })
 export class LoginFormComponent implements OnInit {
 
+  message: string = "";
+
   loginForm: FormGroup = this.fb.group({
     email: [''],
     password: ['']
@@ -18,17 +20,22 @@ export class LoginFormComponent implements OnInit {
   handleSubmit(event: Event) {
     let credentials = this.loginForm.value;
     this.userService.doLogin(credentials)
-      .subscribe({
-        next: (response: any) => {
-          localStorage.setItem("token", response.jwt);
-          this.router.navigate(['/todo-list/all'])
-        }
-      })
   }
 
   constructor(private fb: FormBuilder, private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
+    this.userService.userStream
+      .subscribe({
+        next: (e: any) => {
+          if (e.action === "LOGIN_SUCCESS")
+            this.router.navigate(["/todo-list/all"])
+          if (e.action === "LOGIN_FAILED") {
+            console.log(e);
+            this.message = "Login failed"
+          }
+        }
+      })
   }
 
 }
