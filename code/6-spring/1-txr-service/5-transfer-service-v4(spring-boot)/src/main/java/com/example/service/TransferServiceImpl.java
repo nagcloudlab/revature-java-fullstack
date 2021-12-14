@@ -8,9 +8,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-@Slf4j
+import javax.annotation.security.RolesAllowed;
+
+//@Slf4j
 @Component
-public class TransferServiceImpl implements TransferService{
+public class TransferServiceImpl implements TransferService {
 
     private AccountRepository accountRepository;
 
@@ -18,14 +20,14 @@ public class TransferServiceImpl implements TransferService{
     @Autowired
     public TransferServiceImpl(@Qualifier("jpa") AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
-        log.info("TransferServiceImpl instance created...");
+//        log.info("TransferServiceImpl instance created...");
     }
     // setter
 
     @Override
     @Transactional(transactionManager = "transactionManager")
     public void transfer(double amount, String srcAccNum, String targetAccNum) {
-        log.info("transfer initiated.");
+//        log.info("transfer initiated.");
 
         Account srcAccount = accountRepository.loadAccount(srcAccNum);
         Account targetAccount = accountRepository.loadAccount(targetAccNum);
@@ -33,10 +35,13 @@ public class TransferServiceImpl implements TransferService{
         srcAccount.setBalance(srcAccount.getBalance() - amount);
         targetAccount.setBalance(targetAccount.getBalance() + amount);
 
+        if (false)
+            throw new RuntimeException("oops");
+
         accountRepository.updateAccount(srcAccount);
         accountRepository.updateAccount(targetAccount);
 
-        log.info("transfer finished.");
+//        log.info("transfer finished.");
 
     }
 }

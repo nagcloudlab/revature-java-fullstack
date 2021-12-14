@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-@Slf4j
 @Component
 @Qualifier("jpa")
 public class JpaAccountRepository implements AccountRepository {
@@ -18,18 +17,15 @@ public class JpaAccountRepository implements AccountRepository {
     private EntityManager entityManager;
 
     public JpaAccountRepository() {
-        log.info("JpaAccountRepository instance created...");
     }
 
     @Override
     public Account loadAccount(String number) {
-        log.info("loading account " + number);
         return entityManager.find(Account.class,number);
     }
 
     @Override
     public void updateAccount(Account account) {
-        log.info("updating account " + account.getNumber());
         entityManager.merge(account);
     }
 

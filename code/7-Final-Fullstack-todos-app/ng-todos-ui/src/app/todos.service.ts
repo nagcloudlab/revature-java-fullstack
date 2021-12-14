@@ -25,7 +25,7 @@ export class TodosService {
   }
 
   getTodos() {
-    this.httpClient.get("http://localhost:8080/api/todos")
+    this.httpClient.get("http://65.0.138.33:8080/api/todos")
       .subscribe({
         next: (response: any) => {
           this.todos = response;
@@ -50,7 +50,7 @@ export class TodosService {
 
   addTodo(newTodo: any) {
     return new Promise((resolve, reject) => {
-      this.httpClient.post("http://localhost:8080/api/todos", {
+      this.httpClient.post("http://65.0.138.33:8080/api/todos", {
         title: newTodo.title,
         type: newTodo.type
       }).subscribe({
@@ -83,7 +83,7 @@ export class TodosService {
 
   deleteTodo(todoId: number) {
 
-    this.httpClient.delete("http://localhost:8080/api/todos/" + todoId).subscribe({
+    this.httpClient.delete("http://65.0.138.33:8080/api/todos/" + todoId).subscribe({
       next: e => {
         this.todos = this.todos.filter(todo => todo.id !== todoId);
         this.todosStream.next({
