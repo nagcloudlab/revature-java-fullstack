@@ -1,0 +1,13 @@
+
+
+{{cart.length}} item(s) in cart
+
+<div class="list-group">
+  <div *ngFor="let product of products">
+    <div class="list-group-item">
+      <div>{{product.name}}</div>
+      <div>{{product.price | currency}}</div>
+      <button (click)="addToCart(product)">Buy</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+
+<div class="row">
+  <div class="col-8">
+    <form [formGroup]="customerForm" (submit)="handleSubmit()" >
+      <div class="form-group">
+        <label>Email:</label>
+        <input formControlName="email" class="form-control">
+        <div class="text-danger">{{errors.email_exist}}</div>
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input formControlName="password" type="password" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Confirm Password:</label>
+        <input formControlName="confirmPassword" type="password" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Mobile:</label>
+        <input formControlName="mobile" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Notification:</label>
+        <input (click)="handleNotiType('email')" formControlName="notiType" value="email" type="radio"> Email
+        <input (click)="handleNotiType('sms')" formControlName="notiType" value="sms" type="radio"> SMS
+      </div>
+      <br/>
+      <div class="d-flex">
+        <button (click)="loadCustomer()"  class="btn btn-danger">Load Customer</button>
+        <button (click)="resetCustomerForm()" class="btn btn-dark">Reset</button>
+        <button class="btn btn-dark">submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-4">
+    <pre>
+      is invalid : {{customerForm.invalid}}
+      is valid   : {{customerForm.valid}}
+      <hr/>
+      {{customerForm.controls['mobile']?.errors | json}}
+    </pre>
+  </div>
+</div>
