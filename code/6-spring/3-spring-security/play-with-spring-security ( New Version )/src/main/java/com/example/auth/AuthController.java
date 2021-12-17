@@ -19,12 +19,12 @@ public class AuthController {
 
     private AuthenticationManager authenticationManager;
     private JwtUtils jwtUtils;
-//    private UserDetailsService userDetailsService;
+    private UserDetailsService userDetailsService;
 
-    public AuthController(AuthenticationManager authenticationManager, JwtUtils jwtUtils/*, UserDetailsService userDetailsService */) {
+    public AuthController(AuthenticationManager authenticationManager, JwtUtils jwtUtils, UserDetailsService userDetailsService ) {
         this.authenticationManager = authenticationManager;
         this.jwtUtils = jwtUtils;
-//        this.userDetailsService = userDetailsService;
+        this.userDetailsService = userDetailsService;
     }
 
     @PostMapping("/login")
@@ -34,9 +34,8 @@ public class AuthController {
         AuthResponse authResponse=new AuthResponse();
         try {
             Authentication authentication = authenticationManager.authenticate(authenticationToken);
-            //UserDetails userDetails= userDetailsService.loadUserByUsername(authRequest.getUsername());
+            UserDetails userDetails= userDetailsService.loadUserByUsername(authRequest.getUsername());
             // generate Unique token with user claims
-            UserDetails userDetails=(UserDetails) authentication.getPrincipal();
             String token=jwtUtils.generateToken(userDetails,"NAME");
             authResponse.setToken(token);
         }catch (UsernameNotFoundException | BadCredentialsException e){

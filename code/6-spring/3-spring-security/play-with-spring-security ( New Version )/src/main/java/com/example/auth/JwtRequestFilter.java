@@ -4,6 +4,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -18,12 +19,12 @@ import java.util.ArrayList;
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
 
-    //private final UserDetailsService userDetailsService;
+    private final UserDetailsService userDetailsService;
 
     private final JwtUtils jwtUtils;
 
-    public JwtRequestFilter(/*UserDetailsService userDetailsService,*/ JwtUtils jwtUtils) {
-        //this.userDetailsService = userDetailsService;
+    public JwtRequestFilter(UserDetailsService userDetailsService, JwtUtils jwtUtils) {
+        this.userDetailsService = userDetailsService;
         this.jwtUtils = jwtUtils;
     }
 
@@ -35,8 +36,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             token = authorizationHeader.substring(7);
             username = jwtUtils.extractUsername(token);
-            //UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
-            UserDetails userDetails=new User(username,"",new ArrayList<>());
+            UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
                         userDetails, null, userDetails.getAuthorities());

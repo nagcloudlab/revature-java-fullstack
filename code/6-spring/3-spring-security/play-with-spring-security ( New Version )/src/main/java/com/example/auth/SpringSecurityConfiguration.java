@@ -8,6 +8,8 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -16,9 +18,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final JwtRequestFilter jwtRequestFilter;
+    private final UserDetailsService userDetailsService;
 
-    public SpringSecurityConfiguration(/*UserDetailsService userDetailsService,*/ JwtRequestFilter jwtRequestFilter) {
-        //this.userDetailsService = userDetailsService;
+    public SpringSecurityConfiguration(UserDetailsService userDetailsService, JwtRequestFilter jwtRequestFilter) {
+        this.userDetailsService = userDetailsService;
         this.jwtRequestFilter = jwtRequestFilter;
     }
 
@@ -41,20 +44,21 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
-                .inMemoryAuthentication()
-                    .withUser("Nag")
-                    .password("12345678")
-                    .roles("USER")
-                .and()
-                    .withUser("John")
-                    .password("87654321")
-                    .roles("USER","MANAGER");
+//                .inMemoryAuthentication()
+//                    .withUser("Nag")
+//                    .password("12345678")
+//                    .roles("USER")
+//                .and()
+//                    .withUser("John")
+//                    .password("87654321")
+//                    .roles("USER","MANAGER");
+                .userDetailsService(userDetailsService);
     }
 
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        return new BCryptPasswordEncoder();
     }
 
     @Bean
