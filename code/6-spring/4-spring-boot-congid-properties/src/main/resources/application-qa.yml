@@ -1,0 +1,6 @@
+
+greeting:
+  user: qa-USER
+
+db:
+  password: qa-password

@@ -1,0 +1,29 @@
+
+greeting:
+  user: default-USER
+  message: Hello ${greeting.user}
+  messages: hello,hi,hey
+  locale-messages:
+      en: Hello
+      tn: Vanakkam
+      es: Ola
+
+
+spring:
+  profiles:
+    active: default
+
+db:
+  password: default-password
+
+#
+#---
+#
+#spring:
+#  config:
+#    activate:
+##      on-profile: qa
+#
+#
+#greeting:
+#  user: qa-USER

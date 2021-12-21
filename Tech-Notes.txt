@@ -1,0 +1,48 @@
+
+
+
+Jenkins
+-------------
+
+    - CI & CD pipline tool
+
+
+  CI-tool
+  -------------  
+
+    on code commit
+
+        - pull the code from scm
+        - compile
+        - run - unit & interegtation tests
+        - package   ==> artifact ( .jar | docker image )
+
+        if any failure,
+
+        - send notification
+        
+  CD-tool
+  ---------------
+
+        - configure / provision production envi
+        - deploy artifact
+        - smoke test ( ensure deployment is successful )  
+
+--------------------------------------------------------------
+
+
+what is docker?
+
+    Home             ( computer )
+
+    Villa-1  Div-1 :  family1 ( process ) ( Virtual macine )
+    Villa-2  Div-2 :  family2 ( process ) ( Virtual macine )
+
+
+--------------------------------------------------------------
+
+
+  Home / Building
+
+    - Apartment-1 : family1
+    - Apartment-2 : family2

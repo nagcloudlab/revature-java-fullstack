@@ -1,0 +1,4 @@
+
+greeting:
+  user: production-USER
+  message: Hey ${greeting.user}
