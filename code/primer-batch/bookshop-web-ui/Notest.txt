@@ -1,0 +1,45 @@
+
+
+
+
+Angular Framework
+-----------------------
+
+data binding
+--------------
+
+  1. interpolation
+
+    syntax:
+
+     <element> {{expression}} </element>
+
+  2. property
+
+      <element [property]="expression"/>
+
+  3. event
+
+      <element (event-name)="eventHandler()"/>
+
+
+  4. two-way
+
+
+directives
+---------------------
+
+=> ready/re-usable functions
+
+1- structural
+
+    => to change component's template structure
+
+    e.g ngFor,ngIf,...
+
+2- attribute
+
+    => to change elements attributes
+
+    e.g ngClass
+

@@ -1,0 +1,10 @@
+<div class="container">
+  <hr/>
+  {{title}}
+  <hr/>
+  <div *ngFor="let v of books" class="list-group-item">
+    <app-book [value]="v"></app-book>
+  </div>
+
+
+</div>

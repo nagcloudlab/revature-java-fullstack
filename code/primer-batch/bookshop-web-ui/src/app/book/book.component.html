@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-3">
+    <img class="img-fluid" [src]="v.image">
+  </div>
+  <div class="col-9">
+    <div>{{v.name}}</div>
+    <div>{{v.price}}</div>
+    <button [disabled]="!v.isAvailable" class="btn btn-dark">Buy</button>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a (click)="changeTab(1)" [ngClass]="{'nav-link':true,active:currentTab===1}"  href="#">Description</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="changeTab(2)" [ngClass]="{'nav-link':true,active:currentTab===2}" href="#">Table Of Contents</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="changeTab(3)" [ngClass]="{'nav-link':true,active:currentTab===3}" href="#">Reviews</a>
+      </li>
+    </ul>
+    <div *ngIf="currentTab===1">{{v.description}}</div>
+    <div *ngIf="currentTab===2">TOC</div>
+    <div *ngIf="currentTab===3">
+      <div *ngFor="let rev of reviews">
+        <app-review [value]="rev"></app-review>
+      </div>
+    </div>
+  </div>
+</div>
