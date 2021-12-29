@@ -20,6 +20,8 @@ public class Book {
     private String authorName;
     private double price;
     private String description;
+    @Transient
+    private int publisherId;
     @ManyToOne
     @JoinColumn(name = "publisher_id")
     private Publisher publisher;
