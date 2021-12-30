@@ -1,0 +1,25 @@
+<div *ngIf="books.length===0">No Books</div>
+<table class="table" *ngIf="books.length>0">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Author</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books">
+    <td>{{book.id}}</td>
+    <td>{{book.name}}</td>
+    <td>{{book.price | currency:'USD'}}</td>
+    <td>{{book.author}}</td>
+    <td>
+      <i (click)="handleDeleteBook(book.id)"
+         style="cursor:pointer;font-size: 20px;color: red" class="fa fa-trash">
+      </i>
+    </td>
+  </tr>
+  </tbody>
+</table>

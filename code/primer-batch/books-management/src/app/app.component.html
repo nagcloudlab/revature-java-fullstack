@@ -1,0 +1,36 @@
+
+
+<div class="container">
+
+  <hr/>
+  <h1>revature : books management</h1>
+  <hr/>
+  <ul class="nav nav-pills">
+
+    <ng-container *ngIf="isLoggedIn">
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink="form">Add New-Book</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink="list">View Books</a>
+    </li>
+    </ng-container>
+
+    <ng-container *ngIf="!isLoggedIn">
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink="login">Login</a>
+    </li>
+    </ng-container>
+
+    <ng-container *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="logout">logout</a>
+      </li>
+    </ng-container>
+
+  </ul>
+  <hr/>
+
+  <router-outlet></router-outlet>
+
+</div>
