@@ -1,0 +1,20 @@
+<div class="container">
+  <hr />
+  <h1>Revature - sessions powered by GraphQL</h1>
+  <hr />
+
+
+  <table class="table">
+    <thead>
+      <td>Title</td>
+      <td>Room</td>
+    </thead>
+    <tbody>
+      <tr *ngFor="let session of sessions">
+        <td>{{session.title}}</td>
+        <td>{{session.room}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
